@@ -1,0 +1,19 @@
+{
+  "identifier": "krst.monokai.ristretto",
+  "name": "Monokai Ristretto",
+  "content_type": "SN|Theme",
+  "area": "themes",
+  "version": "0.1",
+  "description": "Dark Theme inspired by Monokai Pro Ristretto",
+  "url": "https://raw.githubusercontent.com/marcolaux/sn-monokai-ristretto/main/css/main.css",
+  "download_url": "https://github.com/marcolaux/sn-monokai-ristretto/archive/refs/tags/0.1.zip",
+  "marketing_url": "https://github.com/marcolaux/sn-monokai-ristretto",
+  "latest_url": "https://raw.githubusercontent.com/marcolaux/sn-monokai-ristretto/main/ext.json",
+  "thumbnail_url": "https://raw.githubusercontent.com/marcolaux/sn-monokai-ristretto/main/sn-monokai-ristretto.png",
+  "dock_icon": {
+    "type": "circle",
+    "background_color": "#191515",
+    "foreground_color": "#f9cc6c",
+    "border_color": "#fd6883"
+  }
+}

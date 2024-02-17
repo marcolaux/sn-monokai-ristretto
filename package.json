@@ -1,0 +1,12 @@
+{
+  "name": "Monokai Ristretto",
+  "version": "0.1",
+  "main": "src/main.css",
+  "sn": {
+    "main": "src/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:marcolaux/sn-monokai-ristretto.git"
+  }
+}
