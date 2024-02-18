@@ -307,6 +307,10 @@ input[type="email"]:focus  {
   color: var(--white);
 }
 
+.text-accessory-tint-1 path[fill*="#fff"]{
+  fill: var(--black);
+}
+
 button:hover .border-info,
 button:focus .border-info {
   border-color: var(--white);
