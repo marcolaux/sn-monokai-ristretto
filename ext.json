@@ -3,17 +3,19 @@
   "name": "Monokai Ristretto",
   "content_type": "SN|Theme",
   "area": "themes",
-  "version": "0.1",
+  "version": "0.4",
+  "main": "src/main.css",
   "description": "Dark Theme inspired by Monokai Pro Ristretto",
-  "url": "https://raw.githubusercontent.com/marcolaux/sn-monokai-ristretto/main/src/main.css",
-  "download_url": "https://raw.githubusercontent.com/marcolaux/sn-monokai-ristretto/main/sn-monokai-ristretto.zip",
+  "showInGallery": true,
+  "url": "https://apps.laux.wtf/sn-monokai-ristretto/src/main.css",
+  "download_url": "https://apps.laux.wtf/sn-monokai-ristretto/sn-monokai-ristretto.zip",
   "marketing_url": "https://github.com/marcolaux/sn-monokai-ristretto",
-  "latest_url": "https://raw.githubusercontent.com/marcolaux/sn-monokai-ristretto/main/ext.json",
-  "thumbnail_url": "https://raw.githubusercontent.com/marcolaux/sn-monokai-ristretto/main/sn-monokai-ristretto.png",
+  "latest_url": "https://apps.laux.wtf/sn-monokai-ristretto/ext.json",
+  "thumbnail": "https://apps.laux.wtf/sn-monokai-ristretto/screenshot.png",
   "dock_icon": {
     "type": "circle",
-    "background_color": "#191515",
+    "background_color": "#f9cc6c",
     "foreground_color": "#f9cc6c",
     "border_color": "#fd6883"
-  }
+ }
 }
