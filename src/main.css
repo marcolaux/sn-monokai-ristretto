@@ -22,8 +22,8 @@
   --sn-stylekit-neutral-color: var(--gray);
   --sn-stylekit-neutral-contrast-color: var(--white);
 
-  --sn-stylekit-info-color: var(--back-button);
-  --sn-stylekit-info-contrast-color: var(--white);
+  --sn-stylekit-info-color: var(--yellow);
+  --sn-stylekit-info-contrast-color: var(--black);
 
   --sn-stylekit-success-color: var(--green);
   --sn-stylekit-success-contrast-color: var(--black);
@@ -130,6 +130,7 @@
 
   --sn-stylekit-passive-color-1: var(--navigation-item-text-color);
   --sn-stylekit-passive-color-3: var(--back-button);
+  --sn-stylekit-passive-color-4: var(--back-editor);
   --sn-stylekit-passive-color-5: var(--black);
 
   --scrollbar-foreground: var(--back-button);
@@ -174,14 +175,6 @@
   border-radius: 8px 0 0 8px;
 }
 
-@media screen and (max-width: 767px){
-  .editor-content, #editor-content {
-    border-radius: 16px 16px 0 0;
-  }  
-}
-
-
-
 .CodeMirror,
 .CodeMirror-gutters,
 .container .milkdown-container .milkdown-menu-wrapper .milkdown-menu,
@@ -199,6 +192,10 @@
 .content-title-bar,
 .sn-component .sk-app-bar {
   border: none;
+}
+
+.text-passive-0 {
+  color: var(--white);
 }
 
 .bg-default,
@@ -261,17 +258,6 @@
   -webkit-text-fill-color: var(--yellow);
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"]  {
-  border-bottom: 2px solid transparent;
-}
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus  {
-  border-bottom: 2px solid var(--yellow);
-}
-
 .preferences-menu-item {
   border-left: 2px solid var(--back-list);
   border-top: none;
@@ -311,6 +297,10 @@ input[type="email"]:focus  {
   fill: var(--black);
 }
 
+*[fill*="#F4"] {
+  fill: var(--gray);
+}
+
 button:hover .border-info,
 button:focus .border-info {
   border-color: var(--white);
@@ -340,7 +330,8 @@ button.border-border:focus {
 }
 
 #note-title-editor{
-  border-bottom: 2px solid transparent;
+  border: 2px solid transparent;
+  border-radius: 6px;
   transition: all .3s ease;
 }
 
@@ -539,46 +530,61 @@ mark {
   border-color: var(--white);
 }
 
-@media screen and (min-width: 768px){
-  #editor-title-bar > div:first-child {
-    margin-bottom: 13px;
+
+@media screen and (max-width: 767px){
+  .editor-content, #editor-content {
+    border-radius: 16px 16px 0 0;
   }
 }
 
+@media screen and (min-width: 768px) {
+  #footer-bar {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: unset;
+    border-radius: 8px;
+    padding: 0;
+    max-width: calc(100vw - 30px);
 
+    div:empty {
+      display: none;
+    }
+  }
+}
 
 /* code editor  */
-.CodeMirror .cm-variable, .CodeMirror .cm-variable-1, .CodeMirror .cm-variable-2 .CodeMirror .cm-string-2 {
-  color: var(--white);
+.CodeMirror .cm-variable, .CodeMirror .cm-variable-1, .CodeMirror .cm-variable-2, .CodeMirror .cm-string-2{
+  color: var(--white) !important;
 }
 .CodeMirror .cm-variable-3 {
-  color: var(--cyan);
+  color: var(--cyan) !important;
 }
 .CodeMirror .cm-def, .CodeMirror .cm-atom {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 .CodeMirror .cm-variable.cm-callee,
 .CodeMirror .cm-qualifier,
 .cm-s-default .cm-keyword{
-  color: var(--green);
+  color: var(--green) !important;
 }
 .CodeMirror .cm-number {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 .cm-s-default .cm-string {
-  color: var(--yellow);
+  color: var(--yellow) !important;
 }
 .cm-s-default .cm-builtin {
-  color: var(--orange);
+  color: var(--orange) !important;
 }
 .cm-s-default .cm-tag {
-  color: var(--red);
+  color: var(--red) !important;
 }
 
 .CodeMirror .cm-meta,
 .cm-s-default .cm-attribute {
-  color: var(--cyan);
+  color: var(--cyan) !important;
 }
 .cm-s-default .cm-comment {
-  color: var(--sn-stylekit-neutral-color);
+  color: var(--sn-stylekit-neutral-color) !important;
 }

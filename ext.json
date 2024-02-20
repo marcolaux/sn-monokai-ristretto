@@ -3,7 +3,7 @@
   "name": "Monokai Ristretto",
   "content_type": "SN|Theme",
   "area": "themes",
-  "version": "0.4",
+  "version": "0.6",
   "main": "src/main.css",
   "description": "Dark Theme inspired by Monokai Pro Ristretto",
   "showInGallery": true,
