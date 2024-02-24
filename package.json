@@ -13,7 +13,7 @@
     "postcss-cli": "^11.0.0"
   },
   "scripts": {
-    "build:style": "node-sass src/main.scss dist/main.css --output-style compressed && postcss -r dist/main.css",
+    "build:style": "node-sass src/main.scss dist/main.css",
     "build:deploy": "npm run deploy",
     "watch": "CHOKIDAR_USEPOLLING=true chokidar src/*.scss -c \"npm run build:style && npm run deploy\" --initial",
     "deploy": "./deploy.sh"
