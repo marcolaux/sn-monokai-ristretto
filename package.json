@@ -1,6 +1,6 @@
 {
   "name": "Monokai Ristretto (dev)",
-  "version": "0.6",
+  "version": "0.7",
   "main": "dist/main.css",
   "repository": {
     "type": "git",
