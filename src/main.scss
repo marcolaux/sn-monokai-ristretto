@@ -34,12 +34,14 @@
   --sn-stylekit-danger-color: var(--red);
   --sn-stylekit-danger-contrast-color: var(--white);
 
+  --normal-button-background-color: var(--sn-stylekit-contrast-background-color);
+
   --sn-stylekit-shadow-color: #2c2525;
   --sn-stylekit-background-color: var(--black);
   --sn-stylekit-border-color: var(--black);
   --sn-stylekit-foreground-color: var(--white);
 
-  --sn-stylekit-contrast-background-color: var(--black);
+  --sn-stylekit-contrast-background-color: var(--sn-stylekit-info-backdrop-color);
   --sn-stylekit-contrast-foreground-color: var(--white);
   --sn-stylekit-contrast-border-color: var(--border);
 
@@ -64,9 +66,10 @@
 
   --sn-stylekit-general-border-radius: 2px;
 
-  --sn-stylekit-monospace-font: 'Ubuntu Mono', courier, monospace;
-  --sn-stylekit-sans-serif-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --sn-stylekit-monospace-font: "Ubuntu Mono", courier, monospace;
+  --sn-stylekit-sans-serif-font: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 
   --sn-stylekit-grey-1: #918181;
   --sn-stylekit-grey-2: #7c6e6e;
@@ -94,16 +97,16 @@
   --editor-pane-editor-background-color: var(--sn-stylekit-editor-background-color);
   --editor-pane-editor-foreground-color: var(--sn-stylekit-editor-foreground-color);
   --editor-pane-component-stack-item-background-color: var(--sn-stylekit-background-color);
-  
+
   --text-selection-color: var(--sn-stylekit-info-contrast-color);
   --text-selection-background-color: var(--sn-stylekit-info-color);
-  
+
   --note-preview-progress-color: var(--sn-stylekit-info-color);
   --note-preview-progress-background-color: var(--sn-stylekit-passive-color-4-opacity-variant);
-  
+
   --note-preview-selected-progress-color: var(--sn-stylekit-secondary-background-color);
   --note-preview-selected-progress-background-color: var(--sn-stylekit-passive-color-4-opacity-variant);
-  
+
   --items-column-background-color: var(--sn-stylekit-background-color);
   --items-column-items-background-color: var(--sn-stylekit-background-color);
   --items-column-border-left-color: var(--sn-stylekit-border-color);
@@ -111,7 +114,7 @@
   --items-column-search-background-color: var(--sn-stylekit-contrast-background-color);
   --item-cell-selected-background-color: var(--black);
   --item-cell-selected-border-left-color: var(--sn-stylekit-info-color);
-  
+
   --navigation-column-background-color: var(--black);
   --navigation-section-title-color: var(--sn-stylekit-secondary-foreground-color);
   --navigation-item-text-color: var(--sn-stylekit-secondary-foreground-color);
@@ -119,12 +122,12 @@
   --navigation-item-selected-background-color: var(--back-button);
 
   --sn-stylekit-info-backdrop-color: var(--back-button);
-  
+
   --preferences-navigation-icon-color: var(--sn-stylekit-neutral-color);
   --preferences-navigation-selected-background-color: var(--sn-stylekit-info-backdrop-color);
-  
+
   --dropdown-menu-radio-button-inactive-color: var(--sn-stylekit-passive-color-1);
-  
+
   --panel-resizer-background-color: var(--sn-stylekit-secondary-contrast-background-color);
   --link-element-color: var(--sn-stylekit-info-color);
 
@@ -144,13 +147,19 @@
   /* Foreground, Background */
   scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 }
+
 *::-webkit-scrollbar {
-  width: 10px; /* Mostly for vertical scrollbars */
+  width: 10px;
+  /* Mostly for vertical scrollbars */
 }
-*::-webkit-scrollbar-thumb { /* Foreground */
+
+*::-webkit-scrollbar-thumb {
+  /* Foreground */
   background: var(--scrollbar-foreground);
 }
-*::-webkit-scrollbar-track { /* Background */
+
+*::-webkit-scrollbar-track {
+  /* Background */
   background: var(--scrollbar-background);
 }
 
@@ -159,19 +168,26 @@
 }
 
 #footer-bar,
-#footer-bar:hover,
+#footer-bar:hover {
+  background-color: var(--back-editor) !important;
+}
+
 .section.editor {
   background-color: var(--back-list) !important;
 }
 
 .sn-component .sk-app-bar,
 #super-mobile-toolbar,
-.editor-content, #editor-content,
-.editor-content .editable, #editor-content .editable, #file-text-preview {
+.editor-content,
+#editor-content,
+.editor-content .editable,
+#editor-content .editable,
+#file-text-preview {
   background-color: var(--back-editor);
 }
 
-.editor-content, #editor-content {
+.editor-content,
+#editor-content {
   border-radius: 8px 0 0 8px;
 }
 
@@ -203,14 +219,20 @@
 #items-column .infinite-scroll {
   background-color: var(--back-list);
 }
-#items-column .infinite-scroll::-webkit-scrollbar-track { /* Background */
+
+#items-column .infinite-scroll::-webkit-scrollbar-track {
+  /* Background */
   background: var(--back-list);
 }
-#navigation, #navigation #navigation-content::-webkit-scrollbar-track { /* Background */
+
+#navigation,
+#navigation #navigation-content::-webkit-scrollbar-track {
+  /* Background */
   background: var(--black);
 }
 
-.sk-panel .sk-panel-content .sk-p, .sk-panel .sk-panel-content .sk-li {
+.sk-panel .sk-panel-content .sk-p,
+.sk-panel .sk-panel-content .sk-li {
   color: var(--white);
 }
 
@@ -218,10 +240,8 @@
 .hover\:text-info:hover,
 .text-info,
 .text-info:hover,
-.text-info:focus,
 .text-text.selected,
 #navigation .tag:hover>.tag-info>.title,
-#navigation .tag:focus>.tag-info>.title,
 .group:hover .group-hover\:text-text {
   color: var(--white);
   -webkit-text-fill-color: var(--white);
@@ -232,18 +252,21 @@
 }
 
 .enabled\:hover\:text-foreground:hover:enabled,
-.enabled\:hover\:text-foreground:hover:enabled svg{
+.enabled\:hover\:text-foreground:hover:enabled svg {
   color: var(--white);
   background-color: var(--item-cell-selected-background-color);
 }
 
-#navigation .tag,
-#navigation .tag:focus,
-#navigation .root-drop:focus {
+#navigation .tag {
   border-left: 2px solid var(--black);
 }
 
-#navigation .tag:active, #navigation .tag.selected, #navigation .tag.is-drag-over, #navigation .root-drop:active, #navigation .root-drop.selected, #navigation .root-drop.is-drag-over {
+#navigation .tag:active,
+#navigation .tag.selected,
+#navigation .tag.is-drag-over,
+#navigation .root-drop:active,
+#navigation .root-drop.selected,
+#navigation .root-drop.is-drag-over {
   border-color: var(--yellow) !important;
   color: var(--yellow);
   -webkit-text-fill-color: var(--yellow);
@@ -253,7 +276,7 @@
 #navigation .tag.selected>.tag-info .title,
 #navigation .root-drop.selected>.tag-info .title,
 #navigation .tag.selected>.tag-info .text-info,
-#navigation .root-drop.selected>.tag-info .text-info  {
+#navigation .root-drop.selected>.tag-info .text-info {
   color: var(--yellow);
   -webkit-text-fill-color: var(--yellow);
 }
@@ -266,8 +289,7 @@
   border-radius: 0;
 }
 
-.preferences-menu-item:hover,
-.preferences-menu-item:focus {
+.preferences-menu-item:hover {
   background-color: var(--navigation-item-selected-background-color);
   color: var(--white);
 
@@ -287,13 +309,14 @@
   }
 }
 
-.enabled\:hover\:text-foreground:hover:enabled, .enabled\:hover\:text-foreground:hover:enabled svg,
-#items-column .content-list-item:hover, #items-column .content-list-item:focus {
+.enabled\:hover\:text-foreground:hover:enabled,
+.enabled\:hover\:text-foreground:hover:enabled svg,
+#items-column .content-list-item:hover {
   background-color: var(--back-button);
   color: var(--white);
 }
 
-.text-accessory-tint-1 path[fill*="#fff"]{
+.text-accessory-tint-1 path[fill*="#fff"] {
   fill: var(--black);
 }
 
@@ -301,20 +324,19 @@
   fill: var(--gray);
 }
 
-button:hover .border-info,
-button:focus .border-info {
+button:hover .border-info {
   border-color: var(--white);
 }
 
-button.border-border{
+button.border-border {
   border-color: var(--back-list);
 }
+
 button.border-border:after {
   color: var(--back-list);
 }
 
-button.border-border:hover,
-button.border-border:focus {
+button.border-border:hover {
   color: var(--white);
   background-color: var(--navigation-item-selected-background-color) !important;
 }
@@ -324,15 +346,14 @@ button.border-border:focus {
   color: var(--navigation-item-text-color);
 }
 
-#footer-bar button:hover,
-#footer-bar button:focus {
+#footer-bar button:hover {
   color: var(--white);
 }
 
-#note-title-editor{
+#note-title-editor {
   border: 2px solid transparent;
   border-radius: 6px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 #note-title-editor:hover {
@@ -342,19 +363,17 @@ button.border-border:focus {
 }
 
 #note-title-editor:focus {
-  background-color: var(--back-editor);
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  border-color: var(--yellow);
+   background-color: var(--back-editor);
+   padding-left: 0.5em;
+   padding-right: 0.5em;
+   border-color: var(--yellow);
 }
 
-button:hover .bg-info,
-button:focus .bg-info {
+button:hover .bg-info {
   background-color: var(--sn-stylekit-neutral-color);
 }
 
-#items-column .content-list-item:hover,
-#items-column .content-list-item:focus {
+#items-column .content-list-item:hover {
   background-color: var(--navigation-item-selected-background-color);
 }
 
@@ -372,33 +391,32 @@ button:focus .bg-info {
   height: 1em;
 }
 
-
-#items-column .text-text.selected.border-accessory-tint-1{
+#items-column .text-text.selected.border-accessory-tint-1 {
   color: var(--sn-stylekit-accessory-tint-color-1);
   -webkit-text-fill-color: var(--sn-stylekit-accessory-tint-color-1);
 }
 
-#items-column .text-text.selected.border-accessory-tint-2{
+#items-column .text-text.selected.border-accessory-tint-2 {
   color: var(--sn-stylekit-accessory-tint-color-2);
   -webkit-text-fill-color: var(--sn-stylekit-accessory-tint-color-2);
 }
 
-#items-column .text-text.selected.border-accessory-tint-3{
+#items-column .text-text.selected.border-accessory-tint-3 {
   color: var(--sn-stylekit-accessory-tint-color-3);
   -webkit-text-fill-color: var(--sn-stylekit-accessory-tint-color-3);
 }
 
-#items-column .text-text.selected.border-accessory-tint-4{
+#items-column .text-text.selected.border-accessory-tint-4 {
   color: var(--sn-stylekit-accessory-tint-color-4);
   -webkit-text-fill-color: var(--sn-stylekit-accessory-tint-color-4);
 }
 
-#items-column .text-text.selected.border-accessory-tint-5{
+#items-column .text-text.selected.border-accessory-tint-5 {
   color: var(--sn-stylekit-accessory-tint-color-5);
   -webkit-text-fill-color: var(--sn-stylekit-accessory-tint-color-5);
 }
 
-#items-column .text-text.selected.border-accessory-tint-6{
+#items-column .text-text.selected.border-accessory-tint-6 {
   color: var(--sn-stylekit-accessory-tint-color-6);
   -webkit-text-fill-color: var(--sn-stylekit-accessory-tint-color-6);
 }
@@ -427,17 +445,21 @@ button:focus .bg-info {
   margin-bottom: 0.33em;
 }
 
-.Lexical__listItemChecked, .Lexical__listItemUnchecked {
+.Lexical__listItemChecked,
+.Lexical__listItemUnchecked {
   padding-left: calc(var(--font-size) + 1rem);
 }
 
-.Lexical__listItemUnchecked:before, .Lexical__listItemChecked:before {
+.Lexical__listItemUnchecked:before,
+.Lexical__listItemChecked:before {
   --size: 1.3em;
 }
+
 .Lexical__listItemChecked:before {
   background-color: var(--item-cell-selected-background-color);
   cursor: pointer;
 }
+
 .Lexical__listItemChecked:after {
   border-color: var(--white);
   width: 11px;
@@ -466,18 +488,18 @@ mark {
   background-color: var(--yellow);
 }
 
-.focus\:border-info:focus {
-  border-color: var(--yellow);
-}
 .Collapsible__title:before {
   border-width: 8px 10px 8px 10px;
 }
+
 .Collapsible__container[open]>.Collapsible__title:before {
   border-width: 10px 8px 0 8px;
 }
+
 .Collapsible__title {
   padding: 0.5em 0.5em 0.5em 2.5em;
 }
+
 .Collapsible__content {
   padding: 1em;
 }
@@ -486,6 +508,10 @@ mark {
   color: var(--yellow) !important;
   background-color: unset !important;
   border-color: transparent !important;
+}
+
+.sn-icon-button.toggled:focus {
+  color: var(--black) !important;
 }
 
 .sn-icon-button.toggled:hover {
@@ -503,10 +529,16 @@ mark {
 }
 
 .section-title-bar-header .text-info-contrast {
-  background-color: var(--sn-stylekit-passive-color-4-opacity-variant);
+  background-color: transparent;
+  color: var(--sn-stylekit-neutral-color);
 }
 
-#items-column #items-title-bar-container{
+.section-title-bar-header .text-info-contrast:hover {
+  color: var(--white);
+  background-color: var(--navigation-item-selected-background-color) !important;
+}
+
+#items-column #items-title-bar-container {
   flex-direction: column-reverse;
   display: flex;
 }
@@ -515,7 +547,7 @@ mark {
   padding-top: 12px;
 }
 
-.app #items-column.section .section-title-bar div[role="search"]{
+.app #items-column.section .section-title-bar div[role="search"] {
   padding-top: 3px;
 }
 
@@ -526,18 +558,23 @@ mark {
 .after\:bg-info::after {
   background-color: var(--white);
 }
+
 .border-info {
   border-color: var(--white);
 }
 
-
-@media screen and (max-width: 767px){
-  .editor-content, #editor-content {
+@media screen and (max-width: 767px) {
+  .editor-content,
+  #editor-content {
     border-radius: 16px 16px 0 0;
   }
 }
 
 @media screen and (min-width: 768px) {
+  #navigation .root-drop {
+    padding-bottom: 60px;
+  }
+
   #footer-bar {
     position: fixed;
     bottom: 15px;
@@ -546,37 +583,51 @@ mark {
     border-radius: 8px;
     padding: 0;
     max-width: calc(100vw - 30px);
+  }
 
-    div:empty {
-      display: none;
-    }
+  #footer-bar div:empty {
+    display: none;
   }
 }
 
+/* super code block */
+
+
 /* code editor  */
-.CodeMirror .cm-variable, .CodeMirror .cm-variable-1, .CodeMirror .cm-variable-2, .CodeMirror .cm-string-2{
+.CodeMirror .cm-variable,
+.CodeMirror .cm-variable-1,
+.CodeMirror .cm-variable-2,
+.CodeMirror .cm-string-2 {
   color: var(--white) !important;
 }
+
 .CodeMirror .cm-variable-3 {
   color: var(--cyan) !important;
 }
-.CodeMirror .cm-def, .CodeMirror .cm-atom {
+
+.CodeMirror .cm-def,
+.CodeMirror .cm-atom {
   color: var(--blue) !important;
 }
+
 .CodeMirror .cm-variable.cm-callee,
 .CodeMirror .cm-qualifier,
-.cm-s-default .cm-keyword{
+.cm-s-default .cm-keyword {
   color: var(--green) !important;
 }
+
 .CodeMirror .cm-number {
   color: var(--blue) !important;
 }
+
 .cm-s-default .cm-string {
   color: var(--yellow) !important;
 }
+
 .cm-s-default .cm-builtin {
   color: var(--orange) !important;
 }
+
 .cm-s-default .cm-tag {
   color: var(--red) !important;
 }
@@ -585,6 +636,7 @@ mark {
 .cm-s-default .cm-attribute {
   color: var(--cyan) !important;
 }
+
 .cm-s-default .cm-comment {
   color: var(--sn-stylekit-neutral-color) !important;
 }
