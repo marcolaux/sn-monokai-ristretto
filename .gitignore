@@ -1,3 +1,5 @@
 .env
-sn-monokai-ristretto.zip
+*.zip
 src/reference.txt
+*.css
+package-lock.json
