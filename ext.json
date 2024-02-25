@@ -1,21 +1,21 @@
 {
+  "name": "Monokai Ristretto (latest)",
   "identifier": "krst.monokai.ristretto",
-  "name": "Monokai Ristretto (dev)",
+  "version": "0.9",
   "content_type": "SN|Theme",
   "area": "themes",
-  "version": "0.7",
-  "main": "dist/main.css",
-  "description": "Dark Theme inspired by Monokai Pro Ristretto",
+  "main": "dist/dist.css",
   "showInGallery": true,
-  "url": "https://apps.laux.wtf/sn-monokai-ristretto/dist/main.css",
-  "download_url": "https://apps.laux.wtf/sn-monokai-ristretto/sn-monokai-ristretto.zip",
-  "marketing_url": "https://github.com/marcolaux/sn-monokai-ristretto",
-  "latest_url": "https://apps.laux.wtf/sn-monokai-ristretto/ext.json",
-  "thumbnail": "https://apps.laux.wtf/sn-monokai-ristretto/screenshot.png",
+  "description": "Dark Theme inspired by Monokai Pro Ristretto",
   "dock_icon": {
     "type": "circle",
     "background_color": "#f9cc6c",
     "foreground_color": "#f9cc6c",
     "border_color": "#fd6883"
- }
+  },
+  "url": "https://apps.laux.wtf/sn-monokai-ristretto/dist/dist.css",
+  "download_url": "https://apps.laux.wtf/sn-monokai-ristretto/sn-monokai-ristretto.zip",
+  "marketing_url": "https://github.com/marcolaux/sn-monokai-ristretto",
+  "latest_url": "https://apps.laux.wtf/sn-monokai-ristretto/ext.json",
+  "thumbnail": "https://apps.laux.wtf/sn-monokai-ristretto/screenshot.png"
 }
