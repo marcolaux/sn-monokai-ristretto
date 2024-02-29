@@ -247,7 +247,7 @@
 
       .border-info {
         border-color: var(--yellow);
-  
+
         svg {
           color: var(--black);
         }
@@ -430,16 +430,15 @@ button.border-border:hover {
 }
 
 #note-title-editor:focus {
-   background-color: var(--back-editor);
-   padding-left: 0.5em;
-   padding-right: 0.5em;
-   border-color: var(--yellow);
+  background-color: var(--back-editor);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-color: var(--yellow);
 }
 
 button:hover .bg-info {
   background-color: var(--sn-stylekit-neutral-color);
 }
-
 
 .Lexical__link {
   color: var(--blue);
@@ -449,86 +448,33 @@ button:hover .bg-info {
   color: var(--white);
 }
 
-.Lexical__h1,
-.Lexical__h2,
-.Lexical__h3,
-.Lexical__h4,
-.Lexical__h5 {
-  margin-bottom: 0.5em;
-  margin-top: 1em;
-}
-
-.Lexical__paragraph {
-  margin-bottom: 0.5em;
-}
-
-.Lexical__listItem {
-  margin-bottom: 0.33em;
-}
-
-
-.Lexical__listItemChecked,
-.Lexical__listItemUnchecked {
-  padding-left: calc(var(--font-size) + 1rem);
-}
-
-.Lexical__listItemUnchecked:before,
-.Lexical__listItemChecked:before {
-  --size: 1.3em;
-}
-
 .Lexical__listItemChecked:before {
   background-color: var(--item-cell-selected-background-color);
   cursor: pointer;
 }
 
 .Lexical__listItemChecked:after {
-  content: "\00d7";
-  display: inline-block;
-  transform: none;
-  font-size: 2em;
-  top: -60%;
-  left: 1px;
-  border: none;
   color: var(--white);
-}
-
-li[role="checkbox"] {
-  margin: 0.5em 0;
-}
-
-.Lexical__quote {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: inherit;
 }
 
 .Lexical__code {
   background-color: var(--back-editor);
-  border: 2px solid var(--back-button);
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 1em;
+}
+
+.Lexical__textCode {
+  background-color: var(--back-list);
 }
 
 mark {
   background-color: var(--yellow);
 }
 
-.Collapsible__container[open]>.Collapsible__title:before {
-  border-width: 10px 8px 0 8px;
+.Collapsible__container {
+  background-color: var(--back-list);
 }
 
-.Collapsible__title {
-  padding: 0.5em 0.5em 0.5em 2em;
-
-  &:before {
-    border-width: 7px 7px 0 7px;
-  }
-}
-
-.Collapsible__content {
-  padding: 1em;
+.Collapsible__container[open] {
+  background-color: var(--back-editor);
 }
 
 .sn-icon-button.toggled {
@@ -578,6 +524,7 @@ mark {
 }
 
 @media screen and (max-width: 767px) {
+
   .editor-content,
   #editor-content {
     border-radius: 16px 16px 0 0;
@@ -674,7 +621,7 @@ mark {
     color: var(--blue) !important;
   }
 
-  .cm-meta  {
+  .cm-meta {
     color: var(--cyan) !important;
   }
 
